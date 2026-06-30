@@ -4,7 +4,6 @@
 # Sistema: MonitorNet
 # Tema: Monitor de conectividade de rede
 # Integrantes: João Vitor
-# Versão: 2.0 - Final
 # ==========================================
 
 # ---- Configuração de caminhos ----
@@ -13,12 +12,6 @@ DIR_PROJETO="$(cd "$(dirname "$0")/.." && pwd)"
 LOG="$DIR_PROJETO/logs/sistema.log"
 RELATORIO="$DIR_PROJETO/relatorios/relatorio_rede.txt"
 HISTORICO="$DIR_PROJETO/dados/historico.txt"
-
-# ---- Criação de pastas necessárias ----
-mkdir -p "$DIR_PROJETO/logs" \
-         "$DIR_PROJETO/relatorios" \
-         "$DIR_PROJETO/dados" \
-         "$DIR_PROJETO/backup"
 
 # ==========================================
 # FUNÇÃO: registrar_log
@@ -34,7 +27,7 @@ registrar_log() {
 # ==========================================
 cabecalho() {
     echo "============================================"
-    echo "         MONITORNET - v2.0 Final            "
+    echo "                MONITORNET                  "
     echo "   Monitor de Conectividade de Rede         "
     echo "============================================"
     echo "Data/Hora : $(date '+%d/%m/%Y %H:%M:%S')"
@@ -191,23 +184,6 @@ fazer_backup() {
     echo ""
 }
 
-# ==========================================
-# FUNÇÃO: instrucao_crontab
-# Exibe como agendar o script no crontab
-# ==========================================
-instrucao_crontab() {
-    echo "----- Agendamento com Crontab -----"
-    echo "  Para executar automaticamente, adicione ao crontab:"
-    echo ""
-    echo "  A cada 10 minutos:"
-    echo "  */10 * * * * bash $DIR_PROJETO/scripts/sistema.sh >> $LOG 2>&1"
-    echo ""
-    echo "  Uma vez por dia às 08h:"
-    echo "  0 8 * * * bash $DIR_PROJETO/scripts/sistema.sh >> $LOG 2>&1"
-    echo ""
-    echo "  Para editar o crontab: crontab -e"
-    echo ""
-}
 
 # ==========================================
 #              EXECUÇÃO PRINCIPAL
@@ -223,7 +199,6 @@ testar_internet
 testar_sites
 gerar_relatorio
 fazer_backup
-instrucao_crontab
 
 echo "============================================"
 echo "  Execução finalizada com sucesso!"
