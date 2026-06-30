@@ -35,7 +35,6 @@ grep      - filtrar informações importantes dos comandos
 awk       - processar e formatar saída dos comandos
 echo      - exibir mensagens e escrever informações em arquivos
 cat       - visualizar arquivos de log e relatório
-mkdir -p  - criar pastas necessárias automaticamente
 cp        - copiar arquivos para backup
 
 ============================================================
@@ -52,7 +51,6 @@ FUNCIONALIDADES DO SISTEMA
 8. Registrar todas as execuções em log
 9. Salvar histórico acumulado de execuções
 10. Fazer backup automático de logs e relatórios
-11. Exibir instruções de agendamento com crontab
 
 ============================================================
 ESTRUTURA DE PASTAS
