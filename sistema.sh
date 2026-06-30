@@ -7,7 +7,7 @@
 # ==========================================
 
 # ---- Configuração de caminhos ----
-DIR_PROJETO="$(cd "$(dirname "$0")/.." && pwd)"
+DIR_PROJETO="$(cd "$(dirname "$0")" && pwd)"
 
 LOG="$DIR_PROJETO/logs/sistema.log"
 RELATORIO="$DIR_PROJETO/relatorios/relatorio_rede.txt"
