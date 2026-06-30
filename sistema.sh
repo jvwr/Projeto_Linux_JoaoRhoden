@@ -13,6 +13,9 @@ LOG="$DIR_PROJETO/logs/sistema.log"
 RELATORIO="$DIR_PROJETO/relatorios/relatorio_rede.txt"
 HISTORICO="$DIR_PROJETO/dados/historico.txt"
 
+# ---- Criação de pastas necessárias ----
+mkdir -p "$DIR_PROJETO/logs" "$DIR_PROJETO/relatorios" "$DIR_PROJETO/dados" "$DIR_PROJETO/backup"
+
 # ==========================================
 # FUNÇÃO: registrar_log
 # Registra mensagens com data/hora no log
